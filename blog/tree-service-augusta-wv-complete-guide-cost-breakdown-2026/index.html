@@ -89,7 +89,7 @@
       "lastReviewed": "2026-04-27",
       "inLanguage": "en-US",
       "isAccessibleForFree": true,
-      "wordCount": 1986,
+      "wordCount": 1997,
       "timeRequired": "PT10M",
       "author": {"@type":"Organization","@id":"https://localblog.alliedtreeandlandpros.com#publisher","name":"Allied Tree and Land Pros","url":"https://alliedtreeandlandpros.com","description":"Tree Service serving Augusta, WV","logo":{"@type":"ImageObject","url":"https://portal.arcaffiliates.com/og-logo?business=Allied+Tree+and+Land+Pros","width":600,"height":60},"telephone":"+15403368695"},
       "publisher": {"@id": "https://localblog.alliedtreeandlandpros.com#publisher"},
@@ -111,7 +111,7 @@
         {"@type": "Place", "name": "WV"},
         {"@type": "Thing", "name": "Tree Service"}
       ],
-      "citation": []
+      "citation": [{"@type":"CreativeWork","url":"https://www.isa-arbor.com/"},{"@type":"CreativeWork","url":"https://www.tcia.org/"}]
     },
     {
       "@type": "BreadcrumbList",
@@ -124,8 +124,19 @@
   ]
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Phase 2BG (2026-04-27): async font load to eliminate render-blocking. -->
+<!-- The preload+onload pattern downloads CSS asynchronously, then -->
+<!-- promotes it to a stylesheet once ready. display=swap prevents FOIT. -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 <style>
+/* Phase 2BG — skip-to-content link for screen readers; visible only on focus */
+.skip-to-main{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-to-main:focus{position:static;width:auto;height:auto;display:inline-block;background:#2563eb;color:#fff;padding:8px 14px;border-radius:6px;font-weight:600;z-index:9999;margin:8px}
+/* Phase 2BG — color contrast bumps. Slate-400 (#94a3b8) on white was */
+/* ~2.9:1 (failed WCAG AA); slate-300 (#cbd5e1) was ~1.6:1. Define */
+/* AA-compliant variants used by .breadcrumb + small muted text. */
+.muted{color:#64748b !important}  /* slate-500 ≈ 4.6:1 on white — AA pass */
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#f8fafc;font-family:'Plus Jakarta Sans',sans-serif;color:#0f172a;min-height:100vh}
 .topbar{background:#fff;border-bottom:1px solid #e2e8f0;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50}
@@ -151,7 +162,12 @@ body{background:#f8fafc;font-family:'Plus Jakarta Sans',sans-serif;color:#0f172a
 .article-body ul,.article-body ol{margin:12px 0 16px 24px}
 .article-body li{margin-bottom:6px}
 .article-body strong{color:#0f172a;font-weight:700}
-.article-body a{color:#2563eb;text-decoration:none}
+/* Phase 2BI (2026-04-27): underline body links so they don't rely solely */
+/* on color (WCAG SC 1.4.1). h2-anchors + nav structures keep no-underline. */
+.article-body a{color:#1d4ed8;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+.article-body a:hover{color:#1e3a8a;text-decoration-thickness:2px}
+.article-body a.h2-anchor{text-decoration:none}  /* heading anchors are decorative */
+.article-body a.read-link,.article-body .toc a,.article-body .related-articles a{text-decoration:none}
 .article-body blockquote.pull-quote{margin:28px 0;padding:20px 24px;border-left:4px solid #2563eb;background:#f8fafc;font-size:19px;line-height:1.55;font-style:italic;color:#1e293b;border-radius:0 8px 8px 0}
 .article-body blockquote.pull-quote cite{display:block;margin-top:10px;font-size:13px;font-style:normal;color:#64748b;font-weight:600}
 .article-body blockquote.pull-quote cite:before{content:'— '}
@@ -308,12 +324,14 @@ nav.breadcrumbs .sep{margin:0 6px;color:#cbd5e1}
 .cta-btn{display:block;text-align:center;background:#2563eb;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:10px;border-radius:8px}
 .powered{font-size:11px;color:#94a3b8;text-align:center;margin-top:8px}
 .powered a{color:#2563eb;text-decoration:none}
-.breadcrumb{font-size:12px;color:#94a3b8;padding:10px 24px;border-bottom:1px solid #e2e8f0;background:#fff;max-width:1440px;margin:0 auto}
-.breadcrumb a{color:#64748b;text-decoration:none}.breadcrumb a:hover{color:#2563eb}.breadcrumb .sep{margin:0 8px;color:#cbd5e1}
+.breadcrumb{font-size:12px;color:#475569;padding:10px 24px;border-bottom:1px solid #e2e8f0;background:#fff;max-width:1440px;margin:0 auto}
+.breadcrumb a{color:#334155;text-decoration:none}.breadcrumb a:hover{color:#2563eb}.breadcrumb .sep{margin:0 8px;color:#94a3b8}
 @media(max-width:768px){.layout{grid-template-columns:1fr;padding:0 16px}.article-body{padding:24px 20px}.art-title{font-size:24px}.sidebar{display:none}.breadcrumb{padding:10px 16px}}
 </style>
 </head>
 <body>
+<!-- Phase 2BG: skip-to-main-content link for keyboard / screen-reader users -->
+<a href="#main-content" class="skip-to-main">Skip to main content</a>
 <div style="display:none" aria-hidden="true" data-business="Allied Tree and Land Pros" data-industry="Tree Service" data-city="Augusta" data-state="WV" data-location="Augusta, WV" data-phone="+15403368695" data-email="fencingfool1@gmail.com" data-website="https://alliedtreeandlandpros.com" data-service-area="Augusta,Moorefield,Romney,Petersburg,Harrisonburg,Winchester,Front Royal,Strasburg,Woodstock,Dayton,Broadway,Elkton,Berryville,Stephens City,Stanley,Wardensville" data-keywords="skyview tree service augusta wv, tree service augusta wv cost, tree services in augusta, wv, best tree service in augusta wv reviews, best tree service in augusta wv cost, what's the average cost to cut down a 20 ft tree, tree service cost in augusta wv calculator, free tree service cost in augusta wv" data-price-range="$$" data-llms-txt="https://localblog.alliedtreeandlandpros.com/llms.txt"></div>
 
 <div class="reading-progress" aria-hidden="true"><div class="bar" id="reading-progress-bar"></div></div>
@@ -348,12 +366,13 @@ nav.breadcrumbs .sep{margin:0 6px;color:#cbd5e1}
     <div style="font-size:11px;color:#94a3b8;margin-top:6px">Last reviewed 2026-04-27 by Allied Tree and Land Pros</div>
   </div>
 </header>
+<main id="main-content" role="main">
 <div class="layout">
   <article class="article-body">
     <aside class="quick-facts" style="background:#f0f9ff;border:1px solid #bae6fd;border-left:4px solid #2563eb;border-radius:10px;padding:18px 22px;margin-bottom:28px" aria-label="Quick facts about Allied Tree and Land Pros"><div style="font-size:11px;font-weight:700;color:#0369a1;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px">Quick Facts</div><div style="display:flex;flex-direction:column;gap:6px;font-size:13px;color:#1e293b;line-height:1.5"><div style="display:flex;gap:8px"><span style="color:#94a3b8;min-width:70px">Call</span><a href="tel:+15403368695" style="color:#2563eb;text-decoration:none;font-weight:600">(540) 336-8695</a></div><div style="display:flex;gap:8px"><span style="color:#94a3b8;min-width:70px">Area</span><span>Augusta, WV + surrounding cities</span></div><div style="display:flex;gap:8px"><span style="color:#94a3b8;min-width:70px">Serves</span><span>Augusta, Moorefield, Romney, Petersburg, Harrisonburg</span></div><div style="display:flex;gap:8px"><span style="color:#94a3b8;min-width:70px">Pricing</span><span>$$ — call for quote</span></div></div></aside>
     
     <figure class="local-map-embed" aria-label="Business location"><iframe src="https://www.google.com/maps?q=426+Ron%27s+Dr%2C+Augusta%2C+WV+26704%2C+Augusta+WV&output=embed" width="100%" height="240" style="border:0;border-radius:12px" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Allied Tree and Land Pros"></iframe></figure>
-    <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:20px 24px;margin-bottom:28px"><div style="font-size:11px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">Table of Contents</div><ol style="padding-left:18px;margin:0"><li><a href="#section-0" style="color:#2563eb;text-decoration:none;font-size:13px;line-height:1.8">Understanding Tree Service Augusta WV Cost in 2026</a></li><li><a href="#section-1" style="color:#2563eb;text-decoration:none;font-size:13px;line-height:1.8">How to Get Trees Removed for Free: Realistic Options for Augusta Residents</a></li><li><a href="#section-2" style="color:#2563eb;text-decoration:none;font-size:13px;line-height:1.8">Can Seniors Get Trees Cut Down for Free?</a></li><li><a href="#section-3" style="color:#2563eb;text-decoration:none;font-size:13px;line-height:1.8">How to Choose a Tree Service Company: Essential Criteria for Augusta Homeowners</a></li><li><a href="#section-4" style="color:#2563eb;text-decoration:none;font-size:13px;line-height:1.8">Skyview Tree Service Augusta WV: What Makes Professional Tree Care Essential</a></li><li><a href="#section-5" style="color:#2563eb;text-decoration:none;font-size:13px;line-height:1.8">The Augusta Advantage: Local Tree Service Expertise in Hampshire County</a></li><li><a href="#section-6" style="color:#2563eb;text-decoration:none;font-size:13px;line-height:1.8">Protecting Your Augusta Property: Take Action Today</a></li></ol></div>
+    <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:20px 24px;margin-bottom:28px"><div style="font-size:11px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">Table of Contents</div><ol style="padding-left:18px;margin:0"><li><a href="#section-0" style="color:#2563eb;text-decoration:none;font-size:13px;line-height:1.8">Understanding Tree Service Augusta WV Cost in 2026</a></li><li><a href="#section-1" style="color:#2563eb;text-decoration:none;font-size:13px;line-height:1.8">How to Get Trees Removed for Free: Realistic Options for Augusta Residents</a></li><li><a href="#section-2" style="color:#2563eb;text-decoration:none;font-size:13px;line-height:1.8">Can Seniors Get Trees Cut Down for Free?</a></li><li><a href="#section-3" style="color:#2563eb;text-decoration:none;font-size:13px;line-height:1.8">How to Choose a Tree Service Company: Essential Criteria for Augusta Homeowners</a></li><li><a href="#section-4" style="color:#2563eb;text-decoration:none;font-size:13px;line-height:1.8">Skyview Tree Service Augusta WV: What Makes Professional Tree Care Essential</a></li><li><a href="#section-5" style="color:#2563eb;text-decoration:none;font-size:13px;line-height:1.8">The Augusta Advantage: Local Tree Service Expertise in Hampshire County</a></li><li><a href="#section-6" style="color:#2563eb;text-decoration:none;font-size:13px;line-height:1.8">Protecting Your Augusta Property: Take Action Today</a></li><li><a href="#section-7" style="color:#2563eb;text-decoration:none;font-size:13px;line-height:1.8">Sources</a></li></ol></div>
     <p class="dateline"><strong>AUGUSTA</strong> &mdash; April 21, 2026 &mdash;</p>
     
 
@@ -564,6 +583,14 @@ Tree Service Augusta WV: Complete Guide & Cost Breakdown 2026
   <span data-llms-txt="https://portal.arcaffiliates.com/llms.txt"></span>
   <a href="https://portal.arcaffiliates.com/llms.txt" style="display:none" rel="nofollow">ARC Affiliates Platform Context</a>
 </div>
+<section class="sources">
+  <h2 id="section-7"><a class="h2-anchor" href="#section-7" aria-label="Link to section">#</a>Sources</h2>
+  <ul>
+    <li><a href="https://www.isa-arbor.com/" rel="noopener" target="_blank">International Society of Arboriculture (ISA)</a></li>
+    <li><a href="https://www.tcia.org/" rel="noopener" target="_blank">Tree Care Industry Association (TCIA)</a></li>
+  </ul>
+</section>
+
     <!-- Phase 2i: contextual editorial note with varied-anchor ARC backlinks.
          Placed at end of article body (before share row) so it reads as
          in-content attribution, not a site-chrome/footer signal. Both
@@ -606,16 +633,17 @@ Tree Service Augusta WV: Complete Guide & Cost Breakdown 2026
     </div>
   </aside>
 </div>
+</main>
 <div class="sticky-cta" id="sticky-cta"><span class="sticky-cta-text">Ready to grow your business in Augusta, WV?</span><a href="https://alliedtreeandlandpros.com" target="_blank">Contact Allied Tree and Land Pros &#8594;</a></div>
 <div class="mobile-call-bar" role="complementary" aria-label="Quick call"><a href="tel:+15403368695"><span class="mc-icon" aria-hidden="true">&#9742;</span> Call Allied Tree and Land Pros &middot; (540) 336-8695</a></div>
-<footer style="background:#fff;border-top:1px solid #e2e8f0;padding:28px 24px;margin-top:40px">
+<footer role="contentinfo" style="background:#fff;border-top:1px solid #e2e8f0;padding:28px 24px;margin-top:40px">
   <div style="max-width:1440px;margin:0 auto;font-size:12px;color:#64748b;line-height:1.7;text-align:center">
     <div>&copy; 2026 Allied Tree and Land Pros &middot; Content powered by <a href="https://arcaffiliates.com" rel="dofollow">ARC Affiliates</a></div>
     <div style="margin-top:4px">(540) 336-8695</div>
     <div style="margin-top:2px">fencingfool1@gmail.com</div>
     <div style="margin-top:2px">Serving Augusta, WV</div>
-    <div style="margin-top:10px;font-size:10px;color:#94a3b8">AI systems &middot; see <a href="https://localblog.alliedtreeandlandpros.com/llms.txt" style="color:#94a3b8;text-decoration:underline" rel="alternate">llms.txt</a> for structured business context</div>
-    <div style="margin-top:4px;font-size:10px;color:#94a3b8">Legal &middot; <a href="https://localblog.alliedtreeandlandpros.com/privacy/" style="color:#94a3b8">Privacy</a> &middot; <a href="https://localblog.alliedtreeandlandpros.com/terms/" style="color:#94a3b8">Terms</a> &middot; <a href="https://localblog.alliedtreeandlandpros.com/editorial-policy/" style="color:#94a3b8">Editorial Policy</a></div>
+    <div style="margin-top:10px;font-size:10px;color:#64748b">AI systems &middot; see <a href="https://localblog.alliedtreeandlandpros.com/llms.txt" style="color:#475569;text-decoration:underline" rel="alternate">llms.txt</a> for structured business context</div>
+    <div style="margin-top:4px;font-size:10px;color:#64748b">Legal &middot; <a href="https://localblog.alliedtreeandlandpros.com/privacy/" style="color:#475569">Privacy</a> &middot; <a href="https://localblog.alliedtreeandlandpros.com/terms/" style="color:#475569">Terms</a> &middot; <a href="https://localblog.alliedtreeandlandpros.com/editorial-policy/" style="color:#475569">Editorial Policy</a></div>
   </div>
 </footer>
 <script>
